@@ -18,10 +18,13 @@ class Sketch : NSObject {
         canvas = Canvas(width: 500, height: 500)
         
         // Set starting position for all the lines
-        offset = 250
+        offset = 0
 
+        //translate the origon to the middle of the canvas
+        canvas.translate(to: Point(x: 250, y: 250))
         //rotate the canvas 45 degrees
-//        canvas.rotate(by: 45)
+        canvas.rotate(by: -45)
+        canvas.drawAxes()
         
         //turn of borders
         canvas.drawShapesWithBorders = false
